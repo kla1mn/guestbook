@@ -51,22 +51,14 @@ class YDBClient:
             return
 
         ddl = """
-              CREATE TABLE IF NOT EXISTS `messages` \
+              CREATE TABLE `messages` \
               ( \
-                  created_at
-                  Uint64, \
-                  id
-                  Utf8, \
-                  name
-                  Utf8, \
-                  text
-                  Utf8, \
-                  PRIMARY
-                  KEY
-              (
-                  id
-              )
-                  ); \
+                  created_at Uint64, \
+                  id Utf8, \
+                  name Utf8, \
+                  text Utf8, \
+                  PRIMARY KEY (created_at, id)
+              ); \
               """
 
         try:
