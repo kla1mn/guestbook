@@ -54,9 +54,9 @@ class YDBClient:
               CREATE TABLE `messages` \
               ( \
                   created_at Uint64, \
-                  id Utf8, \
-                  name Utf8, \
-                  text Utf8, \
+                  id         Utf8, \
+                  name       Utf8, \
+                  text       Utf8, \
                   PRIMARY KEY (created_at, id)
               ); \
               """
