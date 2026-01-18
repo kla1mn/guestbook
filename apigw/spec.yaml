@@ -1,0 +1,32 @@
+openapi: 3.0.0
+info:
+  title: guestbook
+  version: 1.0.0
+
+x-yc-apigateway:
+  service_account_id: ${APIGW_SA_ID}
+  variables:
+    function_tag:
+      default: stable
+      enum: ["stable", "canary"]
+
+paths:
+  /api/version:
+    get:
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: ${GUESTBOOK_FUNCTION_ID}
+        tag: ${var.function_tag}
+
+  /api/messages:
+    get:
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: ${GUESTBOOK_FUNCTION_ID}
+        tag: ${var.function_tag}
+
+    post:
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: ${GUESTBOOK_FUNCTION_ID}
+        tag: ${var.function_tag}

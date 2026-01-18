@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Guestbook</title>
+    <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+<main class="wrap">
+    <h1>Гостевая книга</h1>
+
+    <div class="meta">
+        <div>Front version: <b id="frontVer"></b></div>
+        <div>Last backend: <b id="backInfo">—</b></div>
+        <div>API Gateway release header: <b id="gwRelease">—</b></div>
+    </div>
+
+    <section class="card">
+        <h2>Добавить сообщение</h2>
+        <form id="form">
+            <input id="name" placeholder="Имя (необязательно)" maxlength="50"/>
+            <textarea id="text" placeholder="Сообщение" maxlength="1000" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+        <div class="hint" id="status"></div>
+    </section>
+
+    <section class="card">
+        <h2>Сообщения</h2>
+        <button id="reload">Обновить</button>
+        <ul id="list"></ul>
+    </section>
+</main>
+
+<script src="./app.js"></script>
+</body>
+</html>
