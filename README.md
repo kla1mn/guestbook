@@ -13,5 +13,5 @@ https://website.yandexcloud.net/guestbook-front-236088145/index.html
 - [x] Есть публичный доступ из интернета по HTTPS через бесплатные служебные домены Yandex Cloud. 
 
 ### Скрипты для автоматизации развертывания приложения:
-- [ ] Обновление Serverless Functions
+- [x] Обновление Serverless Functions
 - [ ] Создание схемы в YandexDB
